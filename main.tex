@@ -23,8 +23,12 @@
 	pdftitle={\thetitle},
 	pdfsubject={},
 	pdfauthor={\theauthor},
-	pdfkeywords={Your PDF keywords}
+	pdfkeywords={\thetitle}
 }
+
+\renewcommand*{\thesection}{}
+\renewcommand*{\thesubsection}{\arabic{subsection}}
+\renewcommand*{\thesubsubsection}{\arabic{subsection}.\arabic{subsubsection}}
 
 \begin{document}
 
