@@ -2,15 +2,25 @@
 \usepackage[utf8]{inputenc}
 \usepackage[portuguese]{babel}
 \usepackage[T1]{fontenc}
+\usepackage{csquotes}
 \usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{thmtools}
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{graphicx}
 \usepackage{titling}
 \usepackage{mathtools}
-\usepackage[bookmarks=true, hidelinks]{hyperref}
 \usepackage[ddmmyyyy]{datetime}
+\usepackage[citestyle=authoryear,style=authortitle,sorting=nty]{biblatex}
+\usepackage[bookmarks=true, hidelinks]{hyperref}
 
+\addbibresource{./bibliografia.bib}
+
+% Ambientes para 
+\newtheorem{theorem}{Teorema}[section]
+\newtheorem{proposition}{Proposição}[theorem]
+\renewcommand\qedsymbol{q.e.d.}
 
 \author{Anonymous}
 
