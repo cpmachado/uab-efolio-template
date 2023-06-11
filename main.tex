@@ -11,20 +11,27 @@
 \usepackage{graphicx}
 \usepackage{titling}
 \usepackage{mathtools}
+\usepackage[margin=2cm]{geometry}
 \usepackage[ddmmyyyy]{datetime}
 \usepackage[citestyle=authoryear,style=authortitle,sorting=nty]{biblatex}
 \usepackage[bookmarks=true, hidelinks]{hyperref}
 
 \addbibresource{./bibliografia.bib}
 
-% Ambientes para 
+% Ambientes de provas e demonstrações
 \newtheorem{theorem}{Teorema}[section]
 \newtheorem{proposition}{Proposição}[theorem]
 \renewcommand\qedsymbol{q.e.d.}
 
+% Dados
 \author{Anonymous}
+\newcommand{\numeroEstudante}{1234567}
+\newcommand{\UC}{Elementos de LaTeX}
+\newcommand{\codigoUC}{12345}
+\newcommand{\docentes}{AA}
+\newcommand{\curso}{Licenciatura em Matemática e Aplicações}
 
-\title{e-fólio}
+\title{\numeroEstudante - \UC(\codigoUC) - \theauthor}
 
 \date{\today}
 
@@ -37,9 +44,8 @@
 	pdfkeywords={\thetitle}
 }
 
-\renewcommand*{\thesection}{}
-\renewcommand*{\thesubsection}{\arabic{subsection}}
-\renewcommand*{\thesubsubsection}{\arabic{subsection}.\arabic{subsubsection}}
+\renewcommand*{\thesection}{\arabic{section}}
+\renewcommand*{\thesubsection}{\arabic{section}.\arabic{subsection}}
 
 \begin{document}
 
@@ -51,5 +57,6 @@
 
 \nocite{uabefoliotemplate}
 \printbibliography
+\listoftheorems[title={Lista de Teoremas}]
 
 \end{document}
