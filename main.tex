@@ -1,4 +1,4 @@
-\documentclass[12pt,a4paper]{article}
+\documentclass[11pt,a4paper]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[portuguese]{babel}
 \usepackage[T1]{fontenc}
@@ -10,12 +10,12 @@
 \usepackage{amssymb}
 \usepackage{graphicx}
 \usepackage{titling}
-\usepackage{mathtools}
 \usepackage[margin=2cm]{geometry}
 \usepackage[ddmmyyyy]{datetime}
-\usepackage[citestyle=authoryear,style=authortitle,sorting=nty]{biblatex}
-\usepackage[bookmarks=true, hidelinks]{hyperref}
+\usepackage{biblatex}
+\usepackage{hyperref}
 
+\graphicspath{{./imagem}}
 \addbibresource{./bibliografia.bib}
 
 % Ambientes de provas e demonstrações
@@ -24,7 +24,13 @@
 \renewcommand\qedsymbol{q.e.d.}
 
 % Dados
-\input{./dados.tex}
+\author{Anonymous}
+\newcommand{\numeroEstudante}{1234567}
+\newcommand{\UC}{Elementos de LaTeX}
+\newcommand{\codigoUC}{12345}
+\newcommand{\docentes}{AA}
+\newcommand{\curso}{Licenciatura em Matemática e Aplicações}
+\date{\today}
 
 \title{\numeroEstudante - \UC(\codigoUC) - \theauthor}
 
@@ -38,19 +44,59 @@
 	pdfkeywords={\thetitle}
 }
 
-\renewcommand*{\thesection}{\arabic{section}}
-\renewcommand*{\thesubsection}{\arabic{section}.\arabic{subsection}}
+\makeindex
+
+\newcommand{\exercicio}{
+	\addtocounter{section}{1}
+	\setcounter{subsection}{0}
+	\section*{\arabic{section}}
+	\addcontentsline{toc}{section}{Exercício \arabic{section}}
+}
+
+\newcommand{\alinea}{
+	\addtocounter{subsection}{1}
+	\subsection*{\alph{subsection})}
+	\addcontentsline{toc}{subsection}{\alph{subsection})}
+}
 
 \begin{document}
 
-\include{./e-folio.tex}
+\include{./capa/default.tex}
 
 \newpage
 
-\include{./resolucao.tex}
+\section*{Trabalho/Resolução:}
+
+\exercicio{}
+
+\alinea{}
+
+\begin{theorem}[Somatório de números naturais]
+	Para $n \in \mathbb{N}$, tem-se que $\sum_{k = 1}^n k = \frac{n(n+1)}{2}$.
+\end{theorem}
+
+\begin{proof}
+	\; \\
+	Caso base $n = 1$, tem-se que 1 = 1, pelo que verifica o caso base.\\
+	Fixado $n \in \mathbb{N}$, vamos supor:
+	\begin{align*}
+		\sum_{k = 1}^n k &= \frac{n(n+1)}{2} &&\text{(Hipótese de Indução)}
+		\intertext{Pretende-se provar:}
+		\sum_{k = 1}^{n + 1} k &= \frac{(n + 1)(n+2)}{2} &&\text{(Tese de Indução)}
+		\intertext{Passo de Indução:}
+		\sum_{k = 1}^{n + 1} k &= n + 1 + \sum_{k = 1}^n k
+		\overset{\text{\tiny passo de indução}}{=}
+		n + 1 + \frac{n (n + 1)}{2} \\
+							   &= \frac{n (n + 1) + 2(n + 1)}{2}
+							   = \frac{(n +2)(n + 1)}{2}
+	\end{align*}
+	\\
+\end{proof}
+
+\newpage
 
 \nocite{uabefoliotemplate}
-\printbibliography
+\printbibliography[heading=bibintoc,title={Bibliografia}]
 \listoftheorems[title={Lista de Teoremas}]
 
 \end{document}

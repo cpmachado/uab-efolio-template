@@ -1,14 +1,17 @@
-MAIN=main.tex
-SRC=$(wildcard *.tex)
+MAIN = main.tex
+OUT = ${MAIN:.tex=.pdf}
 LATEX=latexmk -pdf
 LATEX_CLEAN=latexmk -c
 LATEX_WATCH=latexmk -pdf -pvc
 
-all:
-	${LATEX} ${MAIN}
+${OUT}: ${MAIN}
+	latexmk -quiet $(PREVIEW_CONTINUOUSLY) -use-make -pdf ${MAIN}
+
+watch: ${OUT}
+watch: PREVIEW_CONTINUOUSLY=-pvc
 
 clean:
-	$(foreach file,${SRC}, ${LATEX_CLEAN} ${file};)
+	@latexmk -C -bibtex
+	@rm -f *.atfi *.zip *.bbl *.run.xml *.synctex.gz *.lol *.loe
 
-watch:
-	${LATEX_WATCH} ${MAIN}
+.PHONY: watch clean clean
