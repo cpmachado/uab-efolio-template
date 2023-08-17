@@ -1,0 +1,15 @@
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+
+\geometry{
+	a4paper,
+	top=10mm,
+	bottom=10mm,
+	includehead,
+	includefoot,
+	headheight=220pt
+}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\input{capa/epe.tex}}
+\fancyfoot[C]{Pág. \thepage /\pageref{LastPage}}

@@ -10,10 +10,13 @@
 \usepackage{amssymb}
 \usepackage{graphicx}
 \usepackage{titling}
+\usepackage{xcolor}
 \usepackage[margin=2cm]{geometry}
 \usepackage[ddmmyyyy]{datetime}
 \usepackage{biblatex}
 \usepackage{hyperref}
+
+%\input{./preamble/epe.tex}
 
 \graphicspath{{./imagem}}
 \addbibresource{./bibliografia.bib}
@@ -30,10 +33,11 @@
 \newcommand{\codigoUC}{12345}
 \newcommand{\docentes}{AA}
 \newcommand{\curso}{Licenciatura em Matemática e Aplicações}
+\newcommand{\turma}{X}
+\newcommand{\anoLectivo}{2023-2024}
 \date{\today}
 
-\title{\numeroEstudante - \UC(\codigoUC) - \theauthor}
-
+\title{\numeroEstudante - \UC | \codigoUC - \theauthor}
 
 \pagenumbering{arabic}
 
