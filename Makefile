@@ -7,8 +7,8 @@ LATEX_WATCH=latexmk -pdf -pvc
 ${OUT}: ${MAIN}
 	latexmk -quiet $(PREVIEW_CONTINUOUSLY) -use-make -pdf ${MAIN}
 
-watch: ${OUT}
 watch: PREVIEW_CONTINUOUSLY=-pvc
+watch: ${OUT}
 
 clean:
 	@latexmk -C -bibtex
