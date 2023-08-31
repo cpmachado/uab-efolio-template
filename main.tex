@@ -2,21 +2,21 @@
 \usepackage[utf8]{inputenc}
 \usepackage[portuguese]{babel}
 \usepackage[T1]{fontenc}
-\usepackage{csquotes}
-\usepackage{amsmath}
-\usepackage{mathtools}
-\usepackage{amsthm}
-\usepackage{thmtools}
+\usepackage[ddmmyyyy]{datetime}
+\usepackage[margin=2cm]{geometry}
 \usepackage{amsfonts}
+\usepackage{amsmath}
 \usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{biblatex}
+\usepackage{csquotes}
 \usepackage{graphicx}
+\usepackage{mathtools}
+\usepackage{thmtools}
 \usepackage{titling}
 \usepackage{xcolor}
-\usepackage[margin=2cm]{geometry}
-\usepackage[ddmmyyyy]{datetime}
-\usepackage{biblatex}
 %\input{./preamble/epe.tex}
-%\input{./preamble/hm.tex}
+\input{./preamble/hm.tex}
 \usepackage{hyperref}
 
 
@@ -26,7 +26,7 @@
 % Ambientes de provas e demonstrações
 \newtheorem{theorem}{Teorema}[section]
 \newtheorem{proposition}{Proposição}[theorem]
-\renewcommand\qedsymbol{q.e.d.}
+\renewcommand\qedsymbol{\textbf{q.e.d.}}
 
 % Dados
 \author{Anonymous}
@@ -98,6 +98,51 @@
 	\end{align*}
 	\\
 \end{proof}
+
+\alinea{}
+
+
+\paragraph{} Com o preamble de história de matemática activo, importa os
+pacotes para:
+
+\paragraph{} Hieróglifos:
+\textpmhg{\Hthousand}
+$
+\begin{matrix}
+	\textpmhg{\Hhundred\Hhundred\Hhundred}\\
+	\textpmhg{\Hhundred\Hhundred\Hhundred}\\
+	\textpmhg{\Hhundred\Hhundred\Hhundred}
+\end{matrix}
+$
+$
+\begin{matrix}
+	\textpmhg{\Hten\Hten\Hten}\\
+	\textpmhg{\Hten\Hten\Hten}\\
+	\textpmhg{\Hten\Hten\Hten}
+\end{matrix}
+$
+$
+\begin{matrix*}[c]
+	\textpmhg{\Hone\Hone\Hone}\\
+	\textpmhg{\Hone}\\
+\end{matrix*}
+$
+
+\paragraph{} Cuneiforme: \textcopsn{\Oten\Oten\Oten\Oone\Oone},
+\textcopsn{\Oten}
+$
+\begin{matrix*}[c]
+	\textcopsn{\Oone\Oone\Oone}\\
+	\textcopsn{\Oone}\\
+\end{matrix*}
+$
+
+
+\vspace{0.5cm}
+
+\hrule
+
+\paragraph{} Indo-árabe: 1994
 
 \newpage
 
