@@ -1,0 +1,25 @@
+\exercicio
+
+\alinea
+
+\begin{theorem}[Somatório de números naturais]
+	Para $n \in \mathbb{N}$, tem-se que $\sum_{k = 1}^n k = \frac{n(n+1)}{2}$.
+\end{theorem}
+
+\begin{proof}
+	\; \\
+	Caso base $n = 1$, tem-se que 1 = 1, pelo que verifica o caso base.\\
+	Fixado $n \in \mathbb{N}$, vamos supor:
+	\begin{align*}
+		\sum_{k = 1}^n k &= \frac{n(n+1)}{2} &&\text{(Hipótese de Indução)}
+		\intertext{Pretende-se provar:}
+		\sum_{k = 1}^{n + 1} k &= \frac{(n + 1)(n+2)}{2} &&\text{(Tese de Indução)}
+		\intertext{Passo de Indução:}
+		\sum_{k = 1}^{n + 1} k &= n + 1 + \sum_{k = 1}^n k
+		\overset{\text{\tiny passo de indução}}{=}
+		n + 1 + \frac{n (n + 1)}{2} \\
+							   &= \frac{n (n + 1) + 2(n + 1)}{2}
+							   = \frac{(n +2)(n + 1)}{2}
+	\end{align*}
+	\\
+\end{proof}

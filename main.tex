@@ -3,29 +3,25 @@
 \usepackage[portuguese]{babel}
 \usepackage[T1]{fontenc}
 \usepackage[ddmmyyyy]{datetime}
-\usepackage[margin=2cm]{geometry}
+\usepackage[margin=1.4cm]{geometry}
 \usepackage{amsfonts}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{amsthm}
-\usepackage{biblatex}
 \usepackage{csquotes}
 \usepackage{graphicx}
 \usepackage{mathtools}
 \usepackage{thmtools}
 \usepackage{titling}
-\usepackage{xcolor}
-%\input{./preamble/epe.tex}
-\input{./preamble/hm.tex}
+\usepackage{biblatex}
 \usepackage{hyperref}
 
 
-\graphicspath{{./imagem}}
-\addbibresource{./bibliografia.bib}
+\graphicspath{{imagem}}
+\addbibresource{bibliografia.bib}
 
 % Ambientes de provas e demonstrações
 \newtheorem{theorem}{Teorema}[section]
-\newtheorem{proposition}{Proposição}[theorem]
 \renewcommand\qedsymbol{\textbf{q.e.d.}}
 
 % Dados
@@ -39,7 +35,7 @@
 \newcommand{\anoLectivo}{2023-2024}
 \date{\today}
 
-\title{\numeroEstudante - \UC | \codigoUC - \theauthor}
+\title{\numeroEstudante - \UC - \codigoUC - \theauthor}
 
 \pagenumbering{arabic}
 
@@ -67,84 +63,9 @@
 
 \begin{document}
 
-\include{./capa/default.tex}
+\include{capa.tex}
 
-\newpage
-
-\section*{Trabalho/Resolução:}
-
-\exercicio{}
-
-\alinea{}
-
-\begin{theorem}[Somatório de números naturais]
-	Para $n \in \mathbb{N}$, tem-se que $\sum_{k = 1}^n k = \frac{n(n+1)}{2}$.
-\end{theorem}
-
-\begin{proof}
-	\; \\
-	Caso base $n = 1$, tem-se que 1 = 1, pelo que verifica o caso base.\\
-	Fixado $n \in \mathbb{N}$, vamos supor:
-	\begin{align*}
-		\sum_{k = 1}^n k &= \frac{n(n+1)}{2} &&\text{(Hipótese de Indução)}
-		\intertext{Pretende-se provar:}
-		\sum_{k = 1}^{n + 1} k &= \frac{(n + 1)(n+2)}{2} &&\text{(Tese de Indução)}
-		\intertext{Passo de Indução:}
-		\sum_{k = 1}^{n + 1} k &= n + 1 + \sum_{k = 1}^n k
-		\overset{\text{\tiny passo de indução}}{=}
-		n + 1 + \frac{n (n + 1)}{2} \\
-							   &= \frac{n (n + 1) + 2(n + 1)}{2}
-							   = \frac{(n +2)(n + 1)}{2}
-	\end{align*}
-	\\
-\end{proof}
-
-\alinea{}
-
-
-\paragraph{} Com o preamble de história de matemática activo, importa os
-pacotes para:
-
-\paragraph{} Hieróglifos:
-\textpmhg{\Hthousand}
-$
-\begin{matrix}
-	\textpmhg{\Hhundred\Hhundred\Hhundred}\\
-	\textpmhg{\Hhundred\Hhundred\Hhundred}\\
-	\textpmhg{\Hhundred\Hhundred\Hhundred}
-\end{matrix}
-$
-$
-\begin{matrix}
-	\textpmhg{\Hten\Hten\Hten}\\
-	\textpmhg{\Hten\Hten\Hten}\\
-	\textpmhg{\Hten\Hten\Hten}
-\end{matrix}
-$
-$
-\begin{matrix*}[c]
-	\textpmhg{\Hone\Hone\Hone}\\
-	\textpmhg{\Hone}\\
-\end{matrix*}
-$
-
-\paragraph{} Cuneiforme: \textcopsn{\Oten\Oten\Oten\Oone\Oone},
-\textcopsn{\Oten}
-$
-\begin{matrix*}[c]
-	\textcopsn{\Oone\Oone\Oone}\\
-	\textcopsn{\Oone}\\
-\end{matrix*}
-$
-
-
-\vspace{0.5cm}
-
-\hrule
-
-\paragraph{} Indo-árabe: 1994
-
-\newpage
+\include{ex1.tex}
 
 \nocite{uabefoliotemplate}
 \printbibliography[heading=bibintoc,title={Bibliografia}]
