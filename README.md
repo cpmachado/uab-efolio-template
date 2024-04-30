@@ -2,12 +2,15 @@
 
 Template em $\LaTeX$ para os e-fólios da Universidade Aberta(UAb).
 
-## Features:
+## Features
 
 - Pacotes mais utilizados
+- Foco em pdflatex
+
+## Removidos
+
 - Pacotes para cadeira de história de matemática(Hieróglifos e Cuneiforme)
 - Capa para Elementos de Probabilidades e estatística
-- Foco em pdflatex
 
 ## Licença
 
