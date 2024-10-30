@@ -11,7 +11,6 @@
 \usepackage{csquotes}
 \usepackage{graphicx}
 \usepackage{mathtools}
-\usepackage{thmtools}
 \usepackage{titling}
 \usepackage{biblatex}
 \usepackage{hyperref}
@@ -21,7 +20,7 @@
 \addbibresource{bibliografia.bib}
 
 % Ambientes de provas e demonstrações
-\newtheorem{theorem}{Teorema}[section]
+\newtheorem{prop}{Proposição}[section]
 \renewcommand\qedsymbol{\textbf{q.e.d.}}
 
 % Dados
@@ -31,11 +30,10 @@
 \newcommand{\codigoUC}{12345}
 \newcommand{\docentes}{AA}
 \newcommand{\curso}{Licenciatura em Matemática e Aplicações}
-\newcommand{\turma}{X}
-\newcommand{\anoLectivo}{2023-2024}
+\newcommand{\anoLectivo}{2024-2025}
 \date{\today}
 
-\title{\numeroEstudante - \UC - \codigoUC - \theauthor}
+\title{\numeroEstudante - \codigoUC - \UC}
 
 \pagenumbering{arabic}
 
@@ -69,6 +67,5 @@
 
 \nocite{uabefoliotemplate}
 \printbibliography[heading=bibintoc,title={Bibliografia}]
-\listoftheorems[title={Lista de Teoremas}]
 
 \end{document}
