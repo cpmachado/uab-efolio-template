@@ -14,6 +14,9 @@
 \usepackage{titling}
 \usepackage{biblatex}
 \usepackage{hyperref}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+
 
 
 \graphicspath{{imagem}}
@@ -33,7 +36,7 @@
 \newcommand{\anoLectivo}{2025-2026}
 \date{\today}
 
-\title{\numeroEstudante - \codigoUC - \UC}
+\title{\numeroEstudante -\codigoUC -\UC}
 
 \pagenumbering{arabic}
 
@@ -60,6 +63,11 @@
 }
 
 \begin{document}
+
+\pagestyle{fancy}
+\fancyhead{}
+\fancyfoot{}
+\fancyfoot[R]{Página \thepage \;de \pageref{LastPage}}
 
 \include{capa.tex}
 
