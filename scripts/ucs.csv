@@ -1,0 +1,37 @@
+codigo,nome,area,ano,semestre
+21002,Álgebra Linear I,Mat,1,1
+21030,Elementos de Análise Infinitesimal I,Mat,1,1
+21166,História da Matemática,Mat,1,1
+21079,Lógica e Teoria de Conjuntos,Mat,1,1
+21090,Programação,EI,1,1
+21003,Álgebra Linear II,Mat,1,2
+21031,Elementos de Análise Infinitesimal II,Mat,1,2
+21037,Elementos de Probabilidades e Estatística,Mat,1,2
+21165,Geometria,Mat,1,2
+21082,Matemática Finita,Mat,1,2
+21032,Elementos de Análise Infinitesimal III,Mat,2,1
+21035,Elementos de Análise Numérica,Mat,2,1
+21041,Estatística Aplicada I,Mat,2,1
+21164,Equações Diferenciais,Mat,2,1
+21133,Elementos de Álgebra,Mat,2,1
+21005,Análise Complexa,Mat,2,2
+21033,Elementos de Análise Infinitesimal IV,Mat,2,2
+21076,Investigação Operacional,Mat,2,2
+21049,Física I,Fís,2,2
+21162,Curvas e Superfícies,Mat,2,2
+21167,Introdução à Modelação Matemática e Estatística,Mat,3,1
+21161,Análise de Fourier e Aplicações,Mat,3,1
+21089,Processos Estocásticos Aplicados,Mat,3,1
+21036,Elementos de Bioestatística,Mat,3,1
+21078,Linguagens e Computação,EI,3,1
+61023,Investimentos Financeiros,Gest,3,1
+21091,Programação Matemática,Mat,3,2
+21117,Topologia,Mat,3,2
+21073,Introdução à Probabilidade e Estatística Bayesianas,Mat,3,2
+21050,Física II,Fís,3,2
+21147,Complementos de Álgebra,Mat,3,2
+21046,Estruturas de Dados e Algoritmos Fundamentais,EI,3,2
+21042,Estatística Aplicada II,Mat,3,2
+21043,Estatística Computacional,Mat,3,2
+21163,Elementos de Estatística Multivariada,Mat,3,2
+61036,Avaliação de Investimentos,Gest,3,2
