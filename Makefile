@@ -1,13 +1,20 @@
 MAIN = main.tex
-OUT = ${MAIN:.tex=.pdf}
+ALL_TEX_FILES  = $(wildcard *.tex)
+OUT  = ${MAIN:.tex=.pdf}
 
-${OUT}: ${MAIN}
-	latexmk -quiet $(PV) -auxdir=aux -use-make -pdf ${MAIN}
+all: ${OUT}
 
-watch: PV=-pvc
-watch: ${OUT}
+${OUT}:
+	latexmk -quiet -auxdir=aux -pdf ${MAIN}
+
+watch:
+	latexmk -pvc -auxdir=aux -pdf ${MAIN}
 
 clean:
-	rm -rf aux ${OUT}
+	latexmk -C -auxdir=aux ${MAIN}
+	rm -rf aux
 
-.PHONY: watch clean
+format:
+	latexindent -l -s -wd -c=aux $(ALL_TEX_FILES)
+
+.PHONY: all watch clean ${OUT} format
